@@ -32,6 +32,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-stylelint": "^9.0.0",
+    "gulp-watch-sass": "^1.4.1",
     "htmllint": "^0.7.3",
     "htmllint-cli": "0.0.7",
     "husky": "^2.2.0",
