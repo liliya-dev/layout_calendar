@@ -47,6 +47,12 @@ body {
 
 }
 
+.calendar-29 div:nth-child(30) {
+  display: none;
+  background-color: red;
+
+}
+
 .calendar-28 div:nth-child(29) {
   display: none;
   background-color: red;
@@ -60,12 +66,6 @@ body {
 }
 
 .calendar-28 div:nth-child(31) {
-  display: none;
-  background-color: red;
-
-}
-
-.calendar-29 div:nth-child(30) {
   display: none;
   background-color: red;
 
