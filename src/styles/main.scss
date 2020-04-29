@@ -16,6 +16,18 @@ body {
     display: flex;
     flex-wrap: wrap;
     margin: auto;
+    & div:hover {
+      background-color: pink;
+      position: relative;
+      bottom: 20px;
+    }
+    &-30 div:nth-child(31),
+    &-29 div:nth-child(31),
+    &-29 div:nth-child(30),
+    &-28 div:nth-child(29),
+    &-28 div:nth-child(30) {
+      display: none;
+    }
   }
 }
 
@@ -32,26 +44,12 @@ body {
     background-color: hsl(0, 0%, 93%);
     box-sizing: border-box;
     border: 1px solid black ;
+    &::after {
+      content: "#{$i}";
+      font-size: 30px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
   }
-  .calendar div:nth-child(#{$i})::after {
-    content: "#{$i}";
-    font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-}
-
-.calendar div:hover {
-  background-color: pink;
-  position: relative;
-  bottom: 20px;
-}
-
-.calendar-30 div:nth-child(31),
-.calendar-29 div:nth-child(31),
-.calendar-29 div:nth-child(30),
-.calendar-28 div:nth-child(29),
-.calendar-28 div:nth-child(30) {
-  display: none;
 }
 
 @each $week-day, $day in $days {
