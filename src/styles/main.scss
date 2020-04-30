@@ -1,12 +1,12 @@
 
 $days: (
-  "tue": 0,
-  "wed": 1,
-  "thu": 2,
-  "fri": 3,
-  "sat": 4,
-  "sun": 5,
-  "mon": 6
+  "mon": 0,
+  "tue": 1,
+  "wed": 2,
+  "thu": 3,
+  "fri": 4,
+  "sat": 5,
+  "sun": 6,
 );
 
 body {
@@ -36,10 +36,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-basis: 100px;
-    flex-shrink: 0;
+    flex: 0 0  100px;
     height: 100px;
-    flex-grow: 0;
     margin-right: 1px;
     background-color: hsl(0, 0%, 93%);
     box-sizing: border-box;
