@@ -16,16 +16,30 @@ body {
     display: flex;
     flex-wrap: wrap;
     margin: auto;
-    & div:hover {
-      background-color: pink;
-      position: relative;
-      bottom: 20px;
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0  100px;
+      height: 100px;
+      margin-right: 1px;
+      background-color: hsl(0, 0%, 93%);
+      box-sizing: border-box;
+      border: 1px solid black ;
+      font-size: 30px;
+      font-family: Arial, Helvetica, sans-serif;
+      &:hover {
+        background-color: pink;
+        position: relative;
+        bottom: 20px;
+      }
     }
     &-30 div:nth-child(31),
     &-29 div:nth-child(31),
     &-29 div:nth-child(30),
-    &-28 div:nth-child(29),
-    &-28 div:nth-child(30) {
+    &-28 div:nth-child(31),
+    &-28 div:nth-child(30),
+    &-28 div:nth-child(29) {
       display: none;
     }
   }
@@ -33,19 +47,8 @@ body {
 
 @for $i from 1 through 31 {
   .calendar div:nth-child(#{$i}) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 0 0  100px;
-    height: 100px;
-    margin-right: 1px;
-    background-color: hsl(0, 0%, 93%);
-    box-sizing: border-box;
-    border: 1px solid black ;
     &::after {
       content: "#{$i}";
-      font-size: 30px;
-      font-family: Arial, Helvetica, sans-serif;
     }
   }
 }
