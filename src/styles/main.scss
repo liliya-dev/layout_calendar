@@ -11,37 +11,44 @@ $days: (
 
 body {
   margin: 0;
-  .calendar {
-    width: 707px;
+}
+
+.calendar {
+  display: flex;
+  max-width: 100px * 7 + 8px;
+  flex-wrap: wrap;
+  margin: auto;
+
+  div {
     display: flex;
-    flex-wrap: wrap;
-    margin: auto;
-    div {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex: 0 0  100px;
-      height: 100px;
-      margin-right: 1px;
-      background-color: hsl(0, 0%, 93%);
-      box-sizing: border-box;
-      border: 1px solid black ;
-      font-size: 30px;
-      font-family: Arial, Helvetica, sans-serif;
-      &:hover {
-        background-color: pink;
-        position: relative;
-        bottom: 20px;
-      }
+    flex: 0 0  100px;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+    height: 100px;
+    margin-right: 1px;
+
+    background-color: hsl(0, 0%, 93%);
+    border: 1px solid black ;
+
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    &:hover {
+      background-color: pink;
+      position: relative;
+      bottom: 20px;
     }
-    &-30 div:nth-child(31),
-    &-29 div:nth-child(31),
-    &-29 div:nth-child(30),
-    &-28 div:nth-child(31),
-    &-28 div:nth-child(30),
-    &-28 div:nth-child(29) {
-      display: none;
-    }
+  }
+
+  &-30 div:nth-child(31),
+  &-29 div:nth-child(31),
+  &-29 div:nth-child(30),
+  &-28 div:nth-child(31),
+  &-28 div:nth-child(30),
+  &-28 div:nth-child(29) {
+    display: none;
   }
 }
 
