@@ -41,15 +41,6 @@ body {
       bottom: 20px;
     }
   }
-
-  &-30 div:nth-child(31),
-  &-29 div:nth-child(31),
-  &-29 div:nth-child(30),
-  &-28 div:nth-child(31),
-  &-28 div:nth-child(30),
-  &-28 div:nth-child(29) {
-    display: none;
-  }
 }
 
 @for $i from 1 through 31 {
@@ -57,6 +48,12 @@ body {
     &::after {
       content: "#{$i}";
     }
+  }
+}
+
+@for $i from 28 to 31 {
+  .calendar-#{$i} > div:nth-child(n + #{$i + 1}) {
+    display: none;
   }
 }
 
